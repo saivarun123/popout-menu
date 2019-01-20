@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popout Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="popout.css">
+    
+</head>
+<body>
+   <div class="menu" onclick="pop()">
+       <i class="fa fa-share-alt"></i>
+   </div>
+    <div class="menu-items">
+        <div class="item1" id="item1">
+            <center>
+                <a href="#">
+                      <i class="fa fa-facebook"></i>
+                </a>
+            </center>
+        </div>
+         <div class="item2" id="item2">
+            <center>
+                <a href="#">
+                      <i class="fa fa-twitter"></i>
+                </a>
+            </center>
+        </div>
+         <div class="item3" id="item3">
+            <center>
+                <a href="#">
+                      <i class="fa fa-instagram"></i>
+                </a>
+            </center>
+        </div>
+         <div class="item4" id="item4">
+            <center>
+                <a href="#">
+                      <i class="fa fa-pinterest-p"></i>
+                </a>
+            </center>
+        </div>
+         <div class="item5" id="item5">
+            <center>
+                <a href="#">
+                      <i class="fa fa-linkedin"></i>
+                </a>
+            </center>
+        </div>
+    </div>
+    <script type="text/javscript" lang="javascript">
+    var i=0;
+    function pop(){
+        if(i==0){
+            document.getElementById("item1").style.transform = 'translateX(-150px)';
+            document.getElementById("item2").style.transform = 'translate(-100px,-100px)';
+            document.getElementById("item3").style.transform = 'translateY(-150px)';
+            document.getElementById("item4").style.transform = 'translate(100px,-100px)';
+            document.getElementById("item5").style.transform = 'translateX(150px)';
+            i=1;
+        }
+        else{
+            document.getElementById("item1").style.transform = 'translate(0)';
+            document.getElementById("item2").style.transform = 'translate(0)';
+            document.getElementById("item3").style.transform = 'translate(0)';
+            document.getElementById("item4").style.transform = 'translate(0)';
+            document.getElementById("item5").style.transform = 'translate(0)';
+            i=0;
+        }
+    }
+    </script>
+</body>
+</html>
